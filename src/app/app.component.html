@@ -1,0 +1,8 @@
+<app-interface [game]="state.game" [startGame]="startGame" [clearState]="clearState"></app-interface>
+<div class="resultContainer"> 
+<app-your-result *ngIf="state.yourChoiceCurrentDiceImage.length > 0" [yourChoiceCurrentDiceImage]="state.yourChoiceCurrentDiceImage" class="result"></app-your-result>
+<app-airesult *ngIf="state.aiChoiceCurrentDiceImage.length > 0" [aiChoiceCurrentDiceImage]="state.aiChoiceCurrentDiceImage" class="result"></app-airesult>
+</div>
+<br />
+<app-game [resultOfGame]="this.resultOfGame"></app-game>
+<app-ranking [wins]="this.wins" [losses]="this.losses" [draws]="this.draws"> </app-ranking>
